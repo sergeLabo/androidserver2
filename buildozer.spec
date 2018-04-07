@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,kv,ini
 
 # (str) Application versioning (method 1)
-version=0.45
+version=0.46
 
 # 0.46 second compil
 # 0.45 first  compil
@@ -38,10 +38,10 @@ android.presplash_color = fuchsia
 android.permissions = INTERNET,CHANGE_WIFI_MULTICAST_STATE,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
 
 # (str) Android NDK version to use
-android.ndk = 10.3.2
+#android.ndk = 10.3.2
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-android.ndk_path = /media/data/3D/Documents/crystax-ndk-10.3.2
+#android.ndk_path = /media/data/3D/Documents/crystax-ndk-10.3.2
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86
 android.arch = armeabi-v7a
