@@ -16,14 +16,15 @@ source.dir = .
 source.include_exts = py,kv,ini
 
 # (str) Application versioning (method 1)
-version=0.46
+version=0.47
 
+# 0.47 incremental in requirements
 # 0.46 second compil
 # 0.45 first  compil
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements=kivy,twisted
+requirements=kivy,incremental,twisted
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
