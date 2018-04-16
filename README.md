@@ -8,10 +8,10 @@ L'application s'appelle Android_Server_2
 Debian 9.2 64 bits en avril 2018
 Voir 
 VirtualBox 5.1.30
-buildozer
-kivy
+buildozer-0.34
+kivy-1.10.0
 twisted
-python 2.7
+cython-0.25.2 and cython-0.23
 
 * [Installation de debian](https://ressources.labomedia.org/debian_installation_configuration)
 * [VirtualBox](https://ressources.labomedia.org/debian_installation_configuration#virtualbox)
@@ -23,12 +23,12 @@ See https://stackoverflow.com/questions/49707807/buildozer-with-twisted-fails-be
 
 #### Log
 
-####" log_0.71.txt
+##### log_0.71.txt
 requirements=incremental
 
 pas de dossier incremental obtenu
 
-####" log_0.72.txt
+##### log_0.72.txt
 requirements=incremental,kivy
 
 incremental installé dans python2.7
