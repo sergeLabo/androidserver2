@@ -22,21 +22,25 @@ See https://stackoverflow.com/questions/49707807/buildozer-with-twisted-fails-be
 #### Log
 ##### log_0.71.txt
 requirements=incremental
+
 pas de dossier incremental obtenu
 
 ##### log_0.72.txt
 requirements=incremental,kivy
+
 incremental installé dans python2.7
 
 ##### log_0.73.txt
 requirements=incremental,kivy,twisted
+
 erreur avec incremental
 
 ##### log_0.74.txt
 requirements=kivy,twisted
+
 mais accents dans main.py, erreur chargement apk sur android
 
 ##### log_0.75.txt
 requirements=kivy,twisted
-mais sans accents dans main.py
-apk valide et fonctionnel
+
+mais sans accents dans main.py, apk valide et fonctionnel
