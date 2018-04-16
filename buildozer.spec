@@ -4,7 +4,7 @@
 title = androidserver2
 
 # (str) Package name
-package.name = Android Server 2
+package.name = Android_Server_2
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = labomedia.org
@@ -16,15 +16,17 @@ source.dir = .
 source.include_exts = py,kv,ini
 
 # (str) Application versioning (method 1)
-version=0.47
+version=0.75
 
-# 0.47 incremental in requirements
-# 0.46 second compil
-# 0.45 first  compil
+# 0.75 sans accent ok
+# 0.74 kivy,twisted ok
+# 0.73 incremental,kivy,twisted bad
+# 0.72 incremental,kivy, incremental dans python2.7
+# 0.71 incremental, pas de dossier incremental obtenu
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements=kivy,incremental,twisted
+requirements=kivy,twisted
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
@@ -37,12 +39,6 @@ android.presplash_color = fuchsia
 
 # (list) Permissions ,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
 android.permissions = INTERNET,CHANGE_WIFI_MULTICAST_STATE,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
-
-# (str) Android NDK version to use
-#android.ndk = 10.3.2
-
-# (str) Android NDK directory (if empty, it will be automatically downloaded.)
-#android.ndk_path = /media/data/3D/Documents/crystax-ndk-10.3.2
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86
 android.arch = armeabi-v7a

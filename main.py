@@ -1,7 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 
-#  main.py
 
 import os, sys
 import subprocess
@@ -33,8 +32,8 @@ QUEUE = Queue()
 
 
 class MyMulticastSender(DatagramProtocol):
-    """Envoi en continu à 1 fps 
-    à tous les joueurs de l'IP de ce serveur .
+    """Envoi en continu a 1 fps 
+    a tous les joueurs de l'IP de ce serveur .
     """
 
     def __init__(self, config):
@@ -57,17 +56,17 @@ class MyMulticastSender(DatagramProtocol):
         # Set the TTL>1 so multicast will cross router hops:
         # https://www.rap.prd.fr/pdf/technologie_multicast.pdf
 
-        # préconise TTL = 1
+        # preconise TTL = 1
         self.transport.setTTL(1)
 
         # Join a specific multicast group:
         self.transport.joinGroup(self.multi_ip)
 
-        # Boucle infinie pour envoi continu à tous les joueurs
+        # Boucle infinie pour envoi continu a tous les joueurs
         self.send_loop_thread()
 
     def ip_msg(self):
-        """Retourne msg encodé avec l'ip serveur"""
+        """Retourne msg encode avec l'ip serveur"""
 
         ip = {"ip": self.ip_server}
         ip_enc = json.dumps(ip).encode("utf-8")
@@ -99,7 +98,7 @@ class MyTcpServer(Protocol):
 
     def __init__(self, factory):
         
-        print("MyTcpServer un client connecté")
+        print("MyTcpServer un client connecte")
         self.factory = factory
         self.create_user()
         self.tempo = time()
@@ -108,15 +107,15 @@ class MyTcpServer(Protocol):
         """Impossible d'avoir 2 user identiques"""
 
         self.user = "TCP" + str(int(10000* time()))[-8:]
-        print("Un user créé: ", self.user)
+        print("Un user cree: ", self.user)
 
     def connectionMade(self):
         self.addr = self.transport.client
-        print("Une connexion établie par le client {}".format(self.addr))
+        print("Une connexion etablie par le client {}".format(self.addr))
 
     def connectionLost(self, reason):
         print("Connection lost, reason:", reason)
-        print("Connexion fermée avec le client {}".format(self.addr))
+        print("Connexion fermee avec le client {}".format(self.addr))
 
     def dataReceived(self, data):
         """ TODO: rajouter decode sorting"""
@@ -125,7 +124,6 @@ class MyTcpServer(Protocol):
         
         if data:
             print("data", data)
-            print("size =", sys.getsizeof(data))
             QUEUE.put(data)
 
 
@@ -139,12 +137,12 @@ class MyTcpServerFactory(Factory):
         
         # Serveur
         self.numProtocols = 1
-        print("Serveur twisted réception TCP lancé\n")
+        print("Serveur twisted reception TCP lance\n")
 
     def buildProtocol(self, addr):
         print("Nombre de protocol dans factory", self.numProtocols)
 
-        # le self permet l'accès à self.factory dans MyTcpServer
+        # le self permet l'acces a self.factory dans MyTcpServer
         return MyTcpServer(self)    
 
 
@@ -163,15 +161,14 @@ class MainScreen(Screen):
         global QUEUE
         
         while 1:
-            sleep(0.9)
+            sleep(0.02)
             try:
                 data = QUEUE.get(block=False, timeout=0.001)
                 print("data dans queue", data)
-                self.info = data.decode("utf-8")[:10]
+                self.info = data.decode("utf-8")
             except:
                 data = None
                 
-
     def display_info_thread(self):
         thread_d = threading.Thread(target=self.display_info)
         thread_d.start()
@@ -183,7 +180,7 @@ SCREENS = { 0: (MainScreen, "Main")}
 class AndroidServerApp(App):
     
     def build(self):
-        """Exécuté en premier après run()"""
+        """Execute en premier apres run()"""
 
         # Creation des ecrans
         self.screen_manager = ScreenManager()
@@ -193,7 +190,7 @@ class AndroidServerApp(App):
         return self.screen_manager
 
     def on_start(self):
-        """Exécuté apres build()"""
+        """Execute apres build()"""
         
        ## Receive
         tcp_port = int(self.config.get('network', 'tcp_port'))
@@ -207,7 +204,7 @@ class AndroidServerApp(App):
         
     def build_config(self, config):
         """Si le fichier *.ini n'existe pas,
-        il est créé avec ces valeurs par défaut.
+        il est cree avec ces valeurs par defaut.
         Si il manque seulement des lignes, il ne fait rien !
         """
 
@@ -228,33 +225,33 @@ class AndroidServerApp(App):
                               'double_tap_distance': 20})
 
     def build_settings(self, settings):
-        """Construit l'interface de l'écran Options,
-        pour  le serveur seul, Kivy est par défaut,
-        appelé par app.open_settings() dans .kv
+        """Construit l'interface de l'ecran Options,
+        pour  le serveur seul, Kivy est par defaut,
+        appele par app.open_settings() dans .kv
         """
 
-        data =  """[{"type": "title", "title":"Réseau"},
+        data =  """[{"type": "title", "title":"Reseau"},
                             {  "type":    "numeric",
-                                "title":   "Fréquence",
-                                "desc":    "Fréquence entre 1 et 60 Hz",
+                                "title":   "Frequence",
+                                "desc":    "Frequence entre 1 et 60 Hz",
                                 "section": "network", 
                                 "key":     "freq"},
                              
-                    {"type": "title", "title":"Réseau"},
+                    {"type": "title", "title":"Reseau"},
                             {   "type":    "string",
                                 "title":   "IP Multicast",
                                 "desc":    "IP Multicast",
                                 "section": "network", 
                                 "key":     "multi_ip"},
                                 
-                    {"type": "title", "title":"Réseau"},
+                    {"type": "title", "title":"Reseau"},
                             {   "type":    "numeric",
                                 "title":   "Port Multicast",
                                 "desc":    "Port Multicast",
                                 "section": "network", 
                                 "key":     "multi_port"},
                                 
-                    {"type": "title", "title":"Réseau"},
+                    {"type": "title", "title":"Reseau"},
                             {   "type":    "numeric",
                                 "title":   "TCP Port",
                                 "desc":    "TCP Port",
@@ -267,7 +264,7 @@ class AndroidServerApp(App):
         settings.add_json_panel('AndroidServer', self.config, data=data)
 
     def on_config_change(self, config, section, key, value):
-        """Si modification des options, fonction appelée automatiquement
+        """Si modification des options, fonction appelee automatiquement
         """
 
         freq = int(self.config.get('network', 'freq'))
@@ -279,10 +276,10 @@ class AndroidServerApp(App):
             # If frequency change
             if token == ('network', 'freq'):
                 # TODO recalcul tempo
-                print("Nouvelle fréquence", freq)
+                print("Nouvelle frequence", freq)
 
     def go_mainscreen(self):
-        """Retour au menu principal depuis les autres écrans."""
+        """Retour au menu principal depuis les autres ecrans."""
 
         #if touch.is_double_tap:
         self.screen_manager.current = ("Main")

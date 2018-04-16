@@ -1,0 +1,406 @@
+pierre@debian64:~/projets/androidserver2$ buildozer -v android debug
+# Check configuration tokens
+# Ensure build layout
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Run 'dpkg --version'
+# Cwd None
+Programme « dpkg » de gestion de paquets Debian version 1.18.24 (amd64).
+Ce programme est un logiciel libre ; veuillez consulter la « GNU General
+Public License » version 2 ou supérieure pour prendre connaissance des
+conditions de reproduction. AUCUNE garantie n'est offerte.
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /usr/local/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/keytool
+# Install platform
+# Run 'pip install -q --user "appdirs" "colorama>=0.3.3" "sh>=1.10,<1.12.5" "jinja2" "six"'
+# Cwd None
+# Apache ANT found at /home/pierre/.buildozer/android/platform/apache-ant-1.9.4
+# Android SDK found at /home/pierre/.buildozer/android/platform/android-sdk-20
+# Android NDK found at /home/pierre/.buildozer/android/platform/android-ndk-r9c
+# Check application requirements
+# Check garden requirements
+# Compile platform
+# Run '/usr/bin/python -m pythonforandroid.toolchain create --dist_name=Android_Server_2 --bootstrap=sdl2 --requirements=incremental,kivy,twisted --arch armeabi-v7a --copy-libs --color=always --storage-dir=/home/pierre/projets/androidserver2/.buildozer/android/platform/build'
+# Cwd /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Will compile for the following archs: armeabi-v7a
+[INFO]:    Found Android API target in $ANDROIDAPI
+[INFO]:    Available Android APIs are (19)
+[INFO]:    Requested API target 19 is available, continuing.
+[INFO]:    Found NDK dir in $ANDROIDNDK
+[INFO]:    Got NDK version from $ANDROIDNDKVER
+[INFO]:    Using Google NDK r9c
+[INFO]:    Found virtualenv at /usr/local/bin/virtualenv
+[INFO]:    Found the following toolchain versions: ['4.6', '4.8', 'clang3.3']
+[INFO]:    Picking the latest gcc toolchain, here 4.8
+[INFO]:    No existing dists meet the given requirements!
+[INFO]:    No dist exists that meets your requirements, so one will be built.
+[INFO]:    Found multiple valid dependency orders:
+[INFO]:        ['constantly', 'hostpython2', u'incremental', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'python2', 'sdl2', 'setuptools', 'six', 'zope_interface', 'pyjnius', u'twisted', u'kivy']
+[INFO]:        ['constantly', 'hostpython2', u'incremental', 'pygame_bootstrap_components', 'python2', 'sdl', 'setuptools', 'six', 'zope_interface', 'pygame', 'pyjnius', u'twisted', u'kivy']
+[INFO]:    Using the first of these: ['constantly', 'hostpython2', u'incremental', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'python2', 'sdl2', 'setuptools', 'six', 'zope_interface', 'pyjnius', u'twisted', u'kivy']
+[INFO]:    The selected bootstrap is sdl2_gradle
+[INFO]:    # Creating dist with sdl2_gradle bootstrap
+[INFO]:    Dist will have name Android_Server_2 and recipes (incremental, kivy, twisted)
+[INFO]:    Dist will also contain modules (constantly, incremental) installed from pip
+[INFO]:    -> running cp -r /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootst...(and 128 more)
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/bootstrap_builds/sdl2_gradle-python2
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Recipe build order is ['hostpython2', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'python2', 'sdl2', 'setuptools', 'six', 'zope_interface', 'pyjnius', u'twisted', u'kivy']
+[INFO]:    The requirements (constantly, incremental) were not found as recipes, they will be installed with pip.
+[INFO]:    # Downloading recipes 
+[INFO]:    Downloading hostpython2
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/hostpython2
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/hostpython2
+[INFO]:    -> running basename https://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2
+[INFO]:    hostpython2 download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading sdl2_image
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2_image
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2_image
+[INFO]:    -> running basename https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.1.tar.gz
+[INFO]:    sdl2_image download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading sdl2_mixer
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2_mixer
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2_mixer
+[INFO]:    -> running basename https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.1.tar.gz
+                                                                                                                     [INFO]:    sdl2_mixer download already cached, skipping   
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading sdl2_ttf
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2_ttf
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2_ttf
+[INFO]:    -> running basename https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.14.tar.gz
+[INFO]:    sdl2_ttf download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading python2
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/python2
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/python2
+[INFO]:    -> running basename https://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2
+[INFO]:    python2 download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading sdl2
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/sdl2
+[INFO]:    -> running basename https://www.libsdl.org/release/SDL2-2.0.4.tar.gz
+                                                          [INFO]:    sdl2 download already cached, skipping                                                                    
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading setuptools
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/setuptools
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/setuptools
+[INFO]:    -> running basename https://pypi.python.org/packages/source/s/setuptools/setuptools-18.3.1.tar.gz
+[INFO]:    -> running rm -f .mark-setuptools-18.3.1.tar.gz
+[INFO]:    Downloading setuptools from https://pypi.python.org/packages/source/s/setuptools/setuptools-18.3.1.tar.gz
+- Download 39[INFO]:    -> running touch .mark-setuptools-18.3.1.tar.gz                                                                                                        
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading six
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/six
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/six
+[INFO]:    -> running basename https://pypi.python.org/packages/source/s/six/six-1.9.0.tar.gz
+           working: six-1.9.0.tar.gz                                                                                                                                   [INFO]:    six download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading zope_interface
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/zope_interface
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/zope_interface
+[INFO]:    -> running basename https://pypi.python.org/packages/source/z/zope.interface/zope.interface-4.1.3.tar.gz
+[INFO]:    -> running rm -f .mark-zope.interface-4.1.3.tar.gz
+[INFO]:    Downloading zope_interface from https://pypi.python.org/packages/source/z/zope.interface/zope.interface-4.1.3.tar.gz
+[INFO]:    -> running touch .mark-zope.interface-4.1.3.tar.gz
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading pyjnius
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/pyjnius
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/pyjnius
+[INFO]:    -> running basename https://github.com/kivy/pyjnius/archive/master.zip
+           working: master.zip                                                                                                  [INFO]:    pyjnius download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading twisted
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/twisted
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/twisted
+[INFO]:    -> running basename https://github.com/twisted/twisted/archive/twisted-17.9.0.tar.gz
+[INFO]:    -> running rm -f .mark-twisted-17.9.0.tar.gz
+[INFO]:    Downloading twisted from https://github.com/twisted/twisted/archive/twisted-17.9.0.tar.gz
+- Download 3874[INFO]:    -> running touch .mark-twisted-17.9.0.tar.gz                                                                                                         
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Downloading kivy
+[INFO]:    -> running mkdir -p /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/kivy
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/kivy
+[INFO]:    -> running basename https://github.com/kivy/kivy/archive/1.10.0.zip
+[INFO]:    kivy download already cached, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    # Building all recipes for arch armeabi-v7a
+[INFO]:    # Unpacking recipes
+[INFO]:    Unpacking hostpython2 for armeabi-v7a
+[INFO]:    -> running basename https://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop
+[INFO]:    hostpython2 is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking sdl2_image for armeabi-v7a
+[INFO]:    -> running basename https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.1.tar.gz
+       [INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/bootstrap_builds/sdl2_gradle-python2/jni                    
+[INFO]:    sdl2_image is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking sdl2_mixer for armeabi-v7a
+[INFO]:    -> running basename https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.1.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/bootstrap_builds/sdl2_gradle-python2/jni
+[INFO]:    sdl2_mixer is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking sdl2_ttf for armeabi-v7a
+[INFO]:    -> running basename https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.14.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/bootstrap_builds/sdl2_gradle-python2/jni
+[INFO]:    sdl2_ttf is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking python2 for armeabi-v7a
+[INFO]:    -> running basename https://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2
+           working: Python-2.7.2.tar.bz2                                                                                        [INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/python2/armeabi-v7a
+[INFO]:    python2 is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking sdl2 for armeabi-v7a
+[INFO]:    -> running basename https://www.libsdl.org/release/SDL2-2.0.4.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/bootstrap_builds/sdl2_gradle-python2/jni
+[INFO]:    sdl2 is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking setuptools for armeabi-v7a
+[INFO]:    -> running basename https://pypi.python.org/packages/source/s/setuptools/setuptools-18.3.1.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/setuptools/armeabi-v7a
+[INFO]:    -> running tar tf /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/setuptools/setuptools-18.3.1.tar.gz
+           working: setuptools-18.3.1/tests/manual_test.py                                                                                                                     [[INFO]:    -> running mv setuptools-18.3.1 /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/setuptools/armeabi-v7a/setuptools
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking six for armeabi-v7a
+[INFO]:    -> running basename https://pypi.python.org/packages/source/s/six/six-1.9.0.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/six-python2/armeabi-v7a
+[INFO]:    six is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking zope_interface for armeabi-v7a
+[INFO]:    -> running basename https://pypi.python.org/packages/source/z/zope.interface/zope.interface-4.1.3.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/zope_interface/armeabi-v7a
+[INFO]:    -> running tar tf /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/zope_interface/zope.interface-4.1.3.tar.gz
+           working: zope.interface-4.1.3/rtd.txt                                                                          [INFO]:    -> running mv zope.interface-4.1.3 /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/zope_interfac...(and 28 more)
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking pyjnius for armeabi-v7a
+[INFO]:    -> running basename https://github.com/kivy/pyjnius/archive/master.zip
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/pyjnius-python2-sdl2/armeabi-v7a
+[INFO]:    pyjnius is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking twisted for armeabi-v7a
+[INFO]:    -> running basename https://github.com/twisted/twisted/archive/twisted-17.9.0.tar.gz
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/twisted-python2/armeabi-v7a
+[INFO]:    -> running tar tf /home/pierre/projets/androidserver2/.buildozer/android/platform/build/packages/twisted/twisted-17.9.0.tar.gz
+           working: twisted-twisted-17.9.0/tox.ini                     [INFO]:    -> running mv twisted-twisted-17.9.0 /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/twisted-pyt...(and 24 more)
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Unpacking kivy for armeabi-v7a
+[INFO]:    -> running basename https://github.com/kivy/kivy/archive/1.10.0.zip
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a
+[INFO]:    kivy is already unpacked, skipping
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    # Prebuilding recipes
+[INFO]:    Prebuilding hostpython2 for armeabi-v7a
+[INFO]:    -> running cp /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/recipes/h...(and 151 more)
+[INFO]:    Prebuilding sdl2_image for armeabi-v7a
+[INFO]:    sdl2_image has no prebuild_armeabi_v7a, skipping
+[INFO]:    Applying patches for sdl2_image[armeabi-v7a]
+[INFO]:    sdl2_image already patched, skipping
+[INFO]:    Prebuilding sdl2_mixer for armeabi-v7a
+[INFO]:    sdl2_mixer has no prebuild_armeabi_v7a, skipping
+[INFO]:    Applying patches for sdl2_mixer[armeabi-v7a]
+[INFO]:    sdl2_mixer already patched, skipping
+[INFO]:    Prebuilding sdl2_ttf for armeabi-v7a
+[INFO]:    sdl2_ttf has no prebuild_armeabi_v7a, skipping
+[INFO]:    Prebuilding python2 for armeabi-v7a
+[INFO]:    python2 has no prebuild_armeabi_v7a, skipping
+[INFO]:    Applying patches for python2[armeabi-v7a]
+[INFO]:    python2 already patched, skipping
+[INFO]:    Prebuilding sdl2 for armeabi-v7a
+[INFO]:    sdl2 has no prebuild_armeabi_v7a, skipping
+[INFO]:    Applying patches for sdl2[armeabi-v7a]
+[INFO]:    sdl2 already patched, skipping
+[INFO]:    Prebuilding setuptools for armeabi-v7a
+[INFO]:    setuptools has no prebuild_armeabi_v7a, skipping
+[INFO]:    Prebuilding six for armeabi-v7a
+[INFO]:    six has no prebuild_armeabi_v7a, skipping
+[INFO]:    Prebuilding zope_interface for armeabi-v7a
+[INFO]:    zope_interface has no prebuild_armeabi_v7a, skipping
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/zope_interface/armeabi-v7a/zope_interface
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Applying patches for zope_interface[armeabi-v7a]
+[INFO]:    Applying patch no_tests.patch
+[INFO]:    -> running patch -t -d /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/zope_interface/armeabi-v7...(and 175 more)
+[INFO]:    -> running touch /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/zope_interface/armeabi-v7a/zope...(and 19 more)
+[INFO]:    Prebuilding pyjnius for armeabi-v7a
+[INFO]:    pyjnius has no prebuild_armeabi_v7a, skipping
+[INFO]:    Applying patches for pyjnius[armeabi-v7a]
+[INFO]:    pyjnius already patched, skipping
+[INFO]:    Prebuilding twisted for armeabi-v7a
+[INFO]:    twisted has no prebuild_armeabi_v7a, skipping
+[INFO]:    Prebuilding kivy for armeabi-v7a
+[INFO]:    kivy has no prebuild_armeabi_v7a, skipping
+[INFO]:    # Building recipes
+[INFO]:    Building hostpython2 for armeabi-v7a
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2
+[INFO]:    hostpython already exists, skipping build
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Building sdl2_image for armeabi-v7a
+[INFO]:    Building sdl2_mixer for armeabi-v7a
+[INFO]:    Building sdl2_ttf for armeabi-v7a
+[INFO]:    Building python2 for armeabi-v7a
+[INFO]:    Copying hostpython binary to targetpython folder
+[INFO]:    -> running cp /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/ho...(and 133 more)
+[INFO]:    Building sdl2 for armeabi-v7a
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/bootstrap_builds/sdl2_gradle-python2/jni
+[INFO]:    -> running ndk-build V=1
+Should remove twisted tests etc. here, but skipping for now                                                                                                                    
+                                                                                                                                   [INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Building setuptools for armeabi-v7a
+[INFO]:    setuptools apparently isn't already in site-packages
+[INFO]:    Installing setuptools into site-packages
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/setuptools/armeabi-v7a/setuptools
+[INFO]:    -> running hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/python-inst...(and 63 more)
+           working: writing manifest file 'setuptools.egg-info/SOURCES.txt'       [INFO]:    -> running hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_build...(and 65 more)
+           working: Installing easy_install-2.7 script to /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython...(and 35 more)  [[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Building six for armeabi-v7a
+[INFO]:    Python package already exists in site-packages
+[INFO]:    six said it is already built, skipping
+[INFO]:    Building zope_interface for armeabi-v7a
+[INFO]:    zope.interface apparently isn't already in site-packages
+[INFO]:    Installing zope_interface into site-packages
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/zope_interface/armeabi-v7a/zope_interface
+[INFO]:    -> running hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/python-inst...(and 63 more)
+           working: Installing /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/python-installs/Android_Serve[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Building pyjnius for armeabi-v7a
+[INFO]:    Python package already exists in site-packages
+[INFO]:    pyjnius said it is already built, skipping
+[INFO]:    Building twisted for armeabi-v7a
+[INFO]:    twisted apparently isn't already in site-packages
+[INFO]:    Cythonizing anything necessary in twisted
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/twisted-python2/armeabi-v7a/twisted
+[INFO]:    -> running python.host -c import sys; print(sys.path)
+[INFO]:    Trying first build of twisted to get cython files: this is expected to fail
+[INFO]:    -> running python.host setup.py build_ext -v
+('cwd is', '/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/twisted-python2/armeabi-v7a/twisted')                                     
+                                                                           [INFO]:    First build appeared to complete correctly, skipping manualcythonising.cts_twisted       
+[INFO]:    Stripping object files
+[INFO]:    -> running find ./build/lib.linux-x86_64-2.7 -name *.o -exec arm-linux-androideabi-strip --strip-unneeded {} ;
+[INFO]:    <- directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain
+[INFO]:    Installing twisted into site-packages
+[INFO]:    -> directory context /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/twisted-python2/armeabi-v7a/twisted
+[INFO]:    -> running hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/python-inst...(and 63 more)
+           working: Installing mailmail script to /home/pierre[INFO]:    -> running hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_build...(and 65 more)
+           working: distutils.errors.DistutilsError: Could not find suitable distribution for Requirement.parse('incremental>=16.10.1')      Exception in thread background thread for pid 5363:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pierre/.local/lib/python2.7/site-packages/sh.py", line 2170, in background_thread
+    handle_exit_code(exit_code)
+  File "/home/pierre/.local/lib/python2.7/site-packages/sh.py", line 1929, in fn
+    return self.command.handle_command_exit_code(exit_code)
+  File "/home/pierre/.local/lib/python2.7/site-packages/sh.py", line 672, in handle_command_exit_code
+    raise exc
+ErrorReturnCode_1: 
+
+  RAN: /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2 --install-lib=Lib/site-packages
+
+  STDOUT:
+Download error on https://pypi.python.org/simple/incremental/: unknown url type: https -- Some packages may not be found!
+Couldn't find index page for 'incremental' (maybe misspelled?)
+Download error on https://pypi.python.org/simple/: unknown url type: https -- Some packages may not be found!
+No local packages or download links found for incremental>=16.10.1
+Traceback (most recent call last):
+  File "setup.py", line 21, in <module>
+    setuptools.setup(**_setup["getSetupArgs"]())
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/distutils/core.py", line 112, in setup
+    _setup_distribution = dist = klass(attrs)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/dist.py", line 268, in __init__
+    self.fetch_build_eggs(attrs['setup_requires'])
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/dist.py", line 313, in fetch_build_eggs
+    replace_conflicting=True,
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/pkg_resources/__init__.py", line 836, in resolve
+    dist = best[req.key] = env.best_match(req, ws, installer)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/pkg_resources/__init__.py", line 1081, in best_match
+    return self.obtain(req, installer)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/pkg_resources/__init__.py", line 1093, in obtain
+    return installer(requirement)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/dist.py", line 380, in fetch_build_egg
+    return cmd.easy_install(req)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/command/easy_install.py", line 632, in easy_install
+    raise DistutilsError(msg)
+distutils.errors.DistutilsError: Could not find suitable distribution for Requirement.parse('incremental>=16.10.1')
+
+
+  STDERR:
+
+
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/toolchain.py", line 978, in <module>
+    main()
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/toolchain.py", line 975, in main
+    ToolchainCL()
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/toolchain.py", line 512, in __init__
+    getattr(self, args.subparser_name.replace('-', '_'))(args)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/toolchain.py", line 149, in wrapper_func
+    build_dist_from_args(ctx, dist, args)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/toolchain.py", line 193, in build_dist_from_args
+    build_recipes(build_order, python_modules, ctx)
+  File "pythonforandroid/build.py", line 573, in build_recipes
+  File "pythonforandroid/recipe.py", line 929, in build_arch
+  File "pythonforandroid/recipe.py", line 817, in install_python_package
+  File "pythonforandroid/recipe.py", line 830, in install_hostpython_package
+  File "pythonforandroid/logger.py", line 175, in shprint
+  File "/home/pierre/.local/lib/python2.7/site-packages/sh.py", line 720, in next
+    self.wait()
+  File "/home/pierre/.local/lib/python2.7/site-packages/sh.py", line 651, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/home/pierre/.local/lib/python2.7/site-packages/sh.py", line 672, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_1: 
+
+  RAN: /home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/hostpython setup.py install -O2 --root=/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2 --install-lib=Lib/site-packages
+
+  STDOUT:
+Download error on https://pypi.python.org/simple/incremental/: unknown url type: https -- Some packages may not be found!
+Couldn't find index page for 'incremental' (maybe misspelled?)
+Download error on https://pypi.python.org/simple/: unknown url type: https -- Some packages may not be found!
+No local packages or download links found for incremental>=16.10.1
+Traceback (most recent call last):
+  File "setup.py", line 21, in <module>
+    setuptools.setup(**_setup["getSetupArgs"]())
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/distutils/core.py", line 112, in setup
+    _setup_distribution = dist = klass(attrs)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/dist.py", line 268, in __init__
+    self.fetch_build_eggs(attrs['setup_requires'])
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/dist.py", line 313, in fetch_build_eggs
+    replace_conflicting=True,
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/pkg_resources/__init__.py", line 836, in resolve
+    dist = best[req.key] = env.best_match(req, ws, installer)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/pkg_resources/__init__.py", line 1081, in best_match
+    return self.obtain(req, installer)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/pkg_resources/__init__.py", line 1093, in obtain
+    return installer(requirement)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/dist.py", line 380, in fetch_build_egg
+    return cmd.easy_install(req)
+  File "/home/pierre/projets/androidserver2/.buildozer/android/platform/build/build/other_builds/hostpython2/desktop/hostpython2/Lib/site-packages/setuptools/command/easy_install.py", line 632, in easy_install
+    raise DistutilsError(msg)
+distutils.errors.DistutilsError: Could not find suitable distribution for Requirement.parse('incremental>=16.10.1')
+
+
+  STDERR:
+
+# Command failed: /usr/bin/python -m pythonforandroid.toolchain create --dist_name=Android_Server_2 --bootstrap=sdl2 --requirements=incremental,kivy,twisted --arch armeabi-v7a --copy-libs --color=always --storage-dir=/home/pierre/projets/androidserver2/.buildozer/android/platform/build
+# 
+# Buildozer failed to execute the last command
+# The error might be hidden in the log above this error
+# Please read the full log, and search for it before
+# raising an issue with buildozer itself.
+# In case of a bug report, please add a full log with log_level = 2
+pierre@debian64:~/projets/androidserver2$ 
+
