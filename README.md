@@ -1,6 +1,8 @@
 # androidserver2
 Python server on android, on local network. Used in a futur funny game.
 
+Made with twisted
+
 L'application s'appelle Android_Server_2
 
 ### Apk build fails
@@ -44,3 +46,17 @@ mais accents dans main.py, erreur chargement apk sur android
 requirements=kivy,twisted
 
 mais sans accents dans main.py, apk valide et fonctionnel
+
+### Test possible
+
+Avec [TCPclient](https://github.com/sergeLabo/TCPclient)
+
+Application Android qui envoie des nombre incrémentés
+
+### Bugs connus
+Ce projet est une recherche pour créer un serveur TCP sur Android.
+Beaucoup de choses sont brutes de décoffrage.
+
+La fréquence ne sert à rien.
+
+La récupération de l'IP local est fausse.

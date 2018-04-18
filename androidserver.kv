@@ -2,10 +2,32 @@
 
 <MainScreen>:
     BoxLayout:
-        orientation: 'horizontal'
-        Label:
-            text: root.info
-            bold: True
-            size_hint_y: 0.6
-            font_size: "22dp"
-            color: (0, 1, 0, 1)
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: 0.8
+            orientation: 'vertical'
+            Label:    
+                halign: 'center'
+                valign: 'center'
+                text: root.info
+                bold: False
+                font_size: "96dp"
+                color: (0, 1, 0, 1)
+                
+        BoxLayout:
+            size_hint_y: 0.1
+            orientation: 'horizontal'
+
+            Button:
+                background_color: (0.8, 0.8, 0.8, 1)
+                text: 'Options'
+                color: (0, 1, 0, 1)
+                font_size: "22dp"
+                on_release: app.open_settings()
+                
+            Button:
+                background_color: (0.8, 0.8, 0.8, 1)
+                text: 'Quitter'
+                color: (0, 1, 0, 1)
+                font_size: "22dp"
+                on_release: app.do_quit()

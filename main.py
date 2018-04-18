@@ -2,12 +2,10 @@
 # -*- coding: UTF-8 -*-
 
 
-import os, sys
-import subprocess
+from os import _exit
 from time import time, sleep
 import threading
 import json
-import ast
 from Queue import Queue
 
 # install_twisted_rector must be called before importing
@@ -26,7 +24,7 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import StringProperty
 
-from tools import datagram_decode, get_ip_address
+from tools import get_ip_address
 
 QUEUE = Queue()
 
@@ -123,7 +121,6 @@ class MyTcpServer(Protocol):
         global QUEUE
         
         if data:
-            print("data", data)
             QUEUE.put(data)
 
 
@@ -161,10 +158,8 @@ class MainScreen(Screen):
         global QUEUE
         
         while 1:
-            sleep(0.02)
             try:
                 data = QUEUE.get(block=False, timeout=0.001)
-                print("data dans queue", data)
                 self.info = data.decode("utf-8")
             except:
                 data = None
@@ -281,7 +276,6 @@ class AndroidServerApp(App):
     def go_mainscreen(self):
         """Retour au menu principal depuis les autres ecrans."""
 
-        #if touch.is_double_tap:
         self.screen_manager.current = ("Main")
 
     def do_quit(self):
@@ -292,7 +286,7 @@ class AndroidServerApp(App):
         AndroidServerApp.get_running_app().stop()
 
         # Extinction de tout
-        os._exit(0)
+        _exit(0)
 
 
 if __name__ == "__main__":

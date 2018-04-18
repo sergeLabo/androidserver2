@@ -16,8 +16,10 @@ source.dir = .
 source.include_exts = py,kv,ini
 
 # (str) Application versioning (method 1)
-version=0.75
+version=0.77
 
+# 0.77 police 
+# 0.76 nettoyage police optimisation
 # 0.75 sans accent ok
 # 0.74 kivy,twisted ok
 # 0.73 incremental,kivy,twisted bad
@@ -35,7 +37,7 @@ orientation = portrait
 fullscreen = 1
 
 # (string) Presplash background color (for new android toolchain)
-android.presplash_color = fuchsia
+#android.presplash_color = fuchsia
 
 # (list) Permissions ,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
 android.permissions = INTERNET,CHANGE_WIFI_MULTICAST_STATE,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
